@@ -1,0 +1,58 @@
+﻿<Window
+    x:Class="WpfDemo.View.UserEditer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WpfDemo.View"
+    Title="UserEditer"
+    Width="200"
+    Height="230" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="177*"/>
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <StackPanel
+            Grid.Row="0"
+            Width="130"
+            Margin="31,10,31,0"
+            Orientation="Vertical" Grid.RowSpan="2">
+            <StackPanel Margin="10,10,0,0" Orientation="Horizontal">
+                <Label>Id:</Label>
+                <Label
+                    Width="40"
+                    Margin="28,0,0,0"
+                    Content="{Binding UserInfo.UserId}" />
+            </StackPanel>
+            <StackPanel Margin="10,10,0,0" Orientation="Horizontal">
+                <Label>Name:</Label>
+                <TextBox
+                    Width="40"
+                    Margin="5,0,0,0"
+                    Text="{Binding UserInfo.UserName}" />
+            </StackPanel>
+            <StackPanel Margin="10,10,0,0" Orientation="Horizontal">
+                <Label>Age:</Label>
+                <TextBox
+                    Width="40"
+                    Margin="15,0,0,0"
+                    Text="{Binding UserInfo.Age}" />
+            </StackPanel>
+            <StackPanel Margin="10,10,0,0" Orientation="Horizontal">
+                <Label>Height:</Label>
+                <TextBox
+                    Width="40"
+                    Margin="0,0,0,0"
+                    Text="{Binding UserInfo.Height}" />
+            </StackPanel>
+            <StackPanel
+                Margin="0,10,0,0"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <Button
+                    Command="{Binding UpdateUserCommand}"
+                    CommandParameter="{Binding UserInfo}"
+                    Content="修改" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
