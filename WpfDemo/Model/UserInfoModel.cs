@@ -41,7 +41,7 @@
         {
             get
             {
-                return GetValue(() => UserName);
+                return GetValue(() => UserName);  
             }
             set
             {
