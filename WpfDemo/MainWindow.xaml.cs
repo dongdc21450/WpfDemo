@@ -124,27 +124,5 @@
         //        }   
         //    }
         //}
-
-        //private void TreeForeach()
-        //{
-        //    object e = null;     //声明一个变量存放地址
-        //    SqStack S = new SqStack();  //声明一个栈，用来存放遍历过程中非末级节点
-        //    TreeNode p = t;    //声明一个节点变量p 接收函数传来的参数 t
-        //    while (p != null || !S.SqStackEmpty())  //从跟节点开始遍历，只要 p！=null （当前该节点还有子节点） 或者 栈 S 没用清空，循环执行下去。
-        //    {
-        //        if (p != null)
-        //        {
-        //            S.SqStackPush(p); //该节点有子节点，先把该节点保存入栈，（栈是后进先出，正好先遍历完子节点才遍历父节点的控制作用，栈的最底部存的是根节点，最后才弹出遍历，遍历完后，!S.SqStackEmpty() 就不成立了，while循环结束）   
-        //            p = p.left;    // 上一步p变量的节点压入栈保存后，转而获取左边子节点，继续循环，如果这是p=null，也就是刚压入栈的节点没有子节点，开始执行 else 里的语句
-        //        }
-        //        else
-        //        {
-        //            S.SqStackPop(ref e);  //弹出刚压入栈的节点，存放到 e   ref e 是指存放该节点的地址
-        //            p = (TreeNode)e; //类型强制转化成 节点类型，因为 e 声明的是object类型。付值给p，
-        //            Console.Write(p.data + " ");   //输出p的数据。
-        //            p = p.right;     //转而读取该节点右边的树，开始新的循环。
-        //        }
-        //    }
-        //}
     }
 }
